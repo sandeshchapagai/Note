@@ -8,7 +8,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../main.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
-
   @override
   State<Home> createState() => _HomeState();
 }
@@ -40,7 +39,7 @@ class _HomeState extends State<Home> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Spacer(),
+                              const Spacer(),
                               Padding(
                                 padding: const EdgeInsets.only(right: 18.0,top: 10),
                                 child: Text(' $formattedDate'),
@@ -78,8 +77,8 @@ class _HomeState extends State<Home> {
                                     context: context,
                                     builder: (BuildContext context) {
                                       return AlertDialog(
-                                        title: Text('Confirm Delete'),
-                                        content: Text('Do you want to delete this item?'),
+                                        title: const Text('Confirm Delete'),
+                                        content: const Text('Do you want to delete this item?'),
                                         actions: <Widget>[
                                           TextButton(
                                             child: Text('No'),

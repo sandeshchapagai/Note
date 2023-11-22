@@ -11,29 +11,7 @@ class Add_screen extends StatefulWidget {
   @override
   State<Add_screen> createState() => _Add_screenState();
 }
-class Item {
-  String description;
-  String title;
-  DateTime timestamp;
-  Item({required this.title, required this.description,required this.timestamp});
-  // Convert an Item object to a JSON map
-  Map<String, dynamic> toJson() {
-    return {
-      'title': title,
-      'description': description,
-      'timestamp': timestamp.toIso8601String(),
-    };
-  }
 
-  // Create an Item object from a JSON map
-  factory Item.fromJson(Map<String, dynamic> json) {
-    return Item(
-      title: json['title'],
-      description: json['description'],
-      timestamp: DateTime.parse(json['timestamp']),
-    );
-  }
-}
 class _Add_screenState extends State<Add_screen> {
   final TextEditingController _textController = TextEditingController();
   final TextEditingController _textController1 = TextEditingController();
